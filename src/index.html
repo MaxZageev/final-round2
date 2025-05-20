@@ -10,9 +10,83 @@
      <link rel="shortcut icon" href="assets/favicon.ico" />
      <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
      <link rel="manifest" href="site.webmanifest" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
-  <header class="header header--padding">
+ <div class="side-menu">
+    <header class="header header--side">
+    <ul class="wrapper__list">
+        <li>
+            <div class="header__wrapper wrapper">
+            <button type="button" class="menu-burger-button round-icon" aria-label="закрыть меню"><span hidden="hidden">закрыть меню</span></button>
+        </li>
+        <li>
+            <div class="header__logo logo">
+            <a href="#" aria-label="Посетить сайт компании" class="logo__link">
+                <svg class="logo__link" role="img">
+                    <use href="img/logo/logo.svg#logo">
+                </svg>
+            </a>
+            </div>
+        </li>
+    </ul>
+    <div class="header__wrapper-search wrapper-search">
+       <button class="button-search round-icon" aria-label="Поиск">
+       </button>
+        
+    </div>
+</header>
+<main class="main">
+        <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item navigation__item--active"><a href="#" class="navigation__link navigation__link--active">Ремонт техники</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Услуги и сервисы</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Корпоративным клиентам</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Продавцам техники</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Партнерам</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Производителям</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Наши сервисные центры</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Контакты</a></li>                   
+                </ul>
+        </nav>
+</main>
+<footer>
+        <nav class="menu menu--primary">
+            <ul class="menu__list">
+                <li class="menu__item"><a href="#"
+                                        class="menu__link menu__link--call  round-icon"
+                                        aria-label="Позвонить компании"></a>
+                </li>
+                <li class="menu__item"><a href="#"
+                                        class="menu__link menu__link--write  round-icon"
+                                        aria-label="Написать компании"></a>
+                </li>
+                <li class="menu__item"><a href="#"
+                                        class="menu__link menu__link--login  round-icon"
+                                        aria-label="Зайти в свой кабинет"></a>
+                </li>
+            </ul>
+        </nav>
+    <div class="footer__contact">
+        <ul class="contact__list">
+         <li class="contact__item"><a class="mail" href="mailto:mail@cps.com">mail@cps.com</a></li>
+         <li class="contact__item"><a class="nomber" href="tel:88008908900"><strong>88008908900</strong></a></li>
+        </ul>
+    </div>
+    <div class="footer__setings">
+        <ul class="setings__list">
+            <li class="setings__item setings__item--active"><a>RU</a></li>
+            <li class="setings__item"><a>EN</a></li>
+            <li class="setings__item"><a>CH</a></li>
+        </ul>
+    </div>
+</footer>
+</div>
+
+<div class="window">
+<div class="hello">
+  <header class="header header--hello">
     <ul class="header__wrapper__list">
         <li>
             <div class="header__wrapper wrapper">
@@ -123,5 +197,66 @@
         </article>
     </section>
 </main>
+</div>
+
+<div class="swiper">
+<header class="header header--padding">
+    <h4 class="header__title">Ремонт техники различных брендов</h4>
+ </header>
+ <main>
+   <div class="main__card card">
+    <div class="brands-desktop">
+      <ul class="card__list">
+       <li class="card__item">
+        <img class="card__brand card__brand--lenovo" src="img/logo/lenovoBitmap.svg"></img>
+        <div class="button--go round-icon"></div>
+       </li>
+       <li class="card__item">
+        <img class="card__brand card__brand--samsung" src="img/logo/SamsungBitmap.svg"></img>
+        <div class="button--go round-icon"></div>
+       </li>
+       <li class="card__item">
+        <img class="card__brand card__brand--apple" src="img/logo/AppleBitmap.svg"></img>
+        <div class="button--go round-icon"></div>
+       </li>
+       <li class="card__item">
+        <img class="card__brand card__brand--sonic" src="img/logo/SonicBitmap.svg"></img>
+        <div class="button--go round-icon"></div>
+       </li>
+       <li class="card__item">
+        <img class="card__brand card__brand--bosch" src="img/logo/BoschBitmap.svg"></img>
+        <div class="button--go round-icon"></div>
+       </li>
+       <li class="card__item">
+        <img class="card__brand card__brand--hp" src="img/logo/HpBitmap.svg"></img>
+        <div class="button--go round-icon"></div>
+       </li>
+       <li class="card__item">
+        <img class="card__brand card__brand--acer" src="img/logo/AcerBitmap.svg"></img>
+        <div class="button--go round-icon"></div>
+       </li>
+       <li class="card__item">
+        <img class="card__brand card__brand--sony" src="img/logo/SonyBitmap.svg"></img>
+        <div class="button--go round-icon"></div>
+       </li>
+       <li class="card__item">
+        <img class="card__brand card__brand--lenovo" src="img/logo/lenovoBitmap.svg"></img>
+        <div class="button--go round-icon"></div>
+       </li>
+       <li class="card__item">
+        <img class="card__brand card__brand--samsung" src="img/logo/SamsungBitmap.svg"></img>
+        <div class="button--go round-icon"></div>
+       </li>
+       <li class="card__item">
+        <img class="card__brand card__brand--apple" src="img/logo/AppleBitmap.svg"></img>
+        <div class="button--go round-icon"></div>
+       </li>
+      </ul>
+      <button type="button" class="article__button button button_show-more">Показать всё</button>
+    </div>  
+   </div>  
+ </main>
+</div>
+</div>
 </body>
 </html>

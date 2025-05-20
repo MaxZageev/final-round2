@@ -1,0 +1,158 @@
+.header--padding {
+    display: flex;
+    background-image: linear-gradient(to right, #F8F8F8, #ffffff);
+    border-top: solid 1px #D9FFF5 ;
+}
+
+.header__title {
+    color: #7E7E82;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-left: 31px;
+}
+
+.main__card {
+    padding-top: 24px;
+    padding-left: 31px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F8F8F8;
+    padding-bottom: 40px;
+}
+
+.card__list {
+    max-height: 170px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    row-gap: 16px;
+    overflow-y: hidden;
+    transition: max-height .5s linear;
+}
+.card__list--show {
+    max-height: 100vh;
+
+}
+
+.card__list::-webkit-scrollbar {
+    display: none;
+}
+
+.card__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+    border: solid 1px #EAEAEA;
+    width: 240px;
+    height: 72px;
+    background-color: #ffffff;
+} 
+.card__brand {
+    padding-left: 16px;
+    width: auto;
+    height: auto;
+}
+.button_show-more {
+    width: 138px;
+    height: 24px;
+    padding-top: 48px;
+    color: rgb(27, 28, 33);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.button_show-more::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background-image: url('../img/icon/expandread-more.svg');
+    background-size: cover;
+    transition: all .5s;
+}
+
+.button_hide-more::before {
+    transform: rotate3d(1, 0, 0, 180deg);
+}
+
+.button--go {
+    background-image: url(../img/icon/go.svg);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+
+/* Блок мобильного свайпера */
+.brands-mobile {
+    margin-top: 0;
+    padding-top: 0;
+    order: -1;
+  }
+  
+  
+  .card__swiper .swiper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  
+  .card__swiper .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  .card__swiper .swiper-slide {
+    width: 240px !important;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+    border: 1px solid #EAEAEA;
+    background-color: #ffffff;
+  }
+  
+ 
+  .card__swiper .card__brand {
+    padding-left: 16px;
+    width: auto;
+    height: auto;
+  }
+  
+ 
+  
+  .swiper-pagination {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .custom-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #DDDDDD;
+    border-radius: 50%;
+    opacity: 1;
+    transition: background-color 0.3s;
+  }
+  
+  .custom-bullet-active {
+    background-color: #B5B6BC;
+  }

@@ -5,6 +5,9 @@
 @import "settings";
 @import "base";
 
+body {
+  display: flex;
+}
 *,
 *:after,
 *:before {
