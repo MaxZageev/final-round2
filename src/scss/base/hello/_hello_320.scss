@@ -6,6 +6,7 @@
     }
 
     .article {
+
    &__text--size {
         min-width: 288px;
         max-height: 90px;
@@ -14,7 +15,9 @@
         -ms-flex-pack: center;
         justify-content: center;
     }
-
+    &__text--less{
+            max-height: 100vh;
+    }
     &__content--size {
         padding-left: 16px;
         padding-right: 16px;

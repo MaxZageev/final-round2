@@ -10,26 +10,30 @@
     padding-right: 16px;
     border-bottom: 1px solid $hello-background;
     overflow-x: visible;
-}  
-    .header__wrapper {
+ 
+    &__wrapper {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}   
-    .wrapper__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    align-items: center;
+
+        &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
     
-}
-    .header__deliver--hidden {
+        }
+    }   
+    
+    &__deliver--hidden {
     display: none;
-}
-    .header__wrapper-menu {
+    }
+    
+    &__wrapper-menu {
     display: flex;   
     align-items: center;
+    }
 }
 
 .menu-burger-button,
@@ -69,8 +73,8 @@
 .menu {
     display: flex;
     justify-content: flex-end;
-}
-    .menu__list {
+
+    &__list {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -78,12 +82,12 @@
     gap: 16px;
 }
 
-    .menu__item,.menu__link--button {
+    &__item,&__link--button {
     margin: 0;
     padding: 0;
 }
 
-    .menu__link {
+    &__link {
     text-decoration: none;
     color: $main-text-color;
     font-size: 16px;
@@ -95,33 +99,35 @@
     align-items: center;
 }
 
-    .menu__link--button {
+    &__link--button {
     padding: 8px 16px;
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
 
-    .menu__link--call {
+    &__link--call {
     background-image: url("../img/icon/callcall.svg");
 }
 
-    .menu__link--write {
+    &__link--write {
     background-image: url("../img/icon/chatmessage.svg");
 }
 
-    .menu__link--login {
+    &__link--login {
     background-image: url("../img/icon/profileuser.svg");
 }
 
-    .menu__button--status {
+    &__button--status {
     background-image: url("../img/icon/repairsetting.svg");
 }
 
-   .menu__button--application {
+   &__button--application {
     background-image: url("../img/icon/checkstatussearch.svg");
 }
 
+
+}
     .menu--primary {
     display: none;
 }
@@ -246,7 +252,7 @@
     &__image {
     border-radius: 10px;
     width: 100%;
-    height: auto;
+    max-height: 350px;
 }
 }
 .button_read-more {
@@ -274,4 +280,9 @@
     margin-right: 8px;
     background-image: url('../img/icon/expandread-more.svg');
     background-size: cover;
+    transition: all .5s;
+}
+
+.button_read-less::before {
+transform: rotate3d(1, 0, 0, 180deg);
 }

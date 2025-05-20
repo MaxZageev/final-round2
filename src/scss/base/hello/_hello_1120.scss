@@ -65,6 +65,10 @@
         max-height: 160px;
         flex-basis: 490px;
         overflow: hidden;
+
+        &--less {
+            max-height: 100vh;
+        }
     }
 
     &__content--size {

@@ -41,6 +41,10 @@
         max-height: 160px;
         min-width: 312px;
         overflow: hidden;
+
+         &--less {
+            max-height: 100vh;
+        }
     }
 
     &__content--size,
