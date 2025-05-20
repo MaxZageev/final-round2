@@ -1,0 +1,24 @@
+@media screen and (min-width: 319px) {
+    .navigation {
+        overflow-x: auto;
+        overflow-y: hidden;
+        overflow-x: visible;
+    }
+
+    .article {
+   &__text--size {
+        min-width: 288px;
+        max-height: 90px;
+        overflow: hidden;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    &__content--size {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 16px;
+    }
+}
+}

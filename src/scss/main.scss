@@ -3,16 +3,13 @@
 @import "vendor";
 @import "vars";
 @import "settings";
+@import "base";
 
 
-.header {
-  text-align: center;
-  & img {
-    width: 30%;
-  }
-}
-
-.welcome-title {
-  margin-top: 50px;
-  font-size: 6em;
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }

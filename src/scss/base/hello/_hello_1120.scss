@@ -1,0 +1,120 @@
+@media screen  and (min-width: 1120px) {
+    .header {
+        display: none;
+    }
+
+    .menu {
+    &__button {
+        color: $main-text-color;
+        font-family: 'TT Lakes', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-align: left;
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__button::after {
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin-left: 8px;
+        background-size: cover;
+    }
+
+    &__list li:first-child .menu__button::after {
+        background-image: url("../img/icon/repairsetting.svg");
+    }
+
+    &__list li:last-child .menu__button::after {
+        background-image: url("../img/icon/checkstatussearch.svg");
+    }
+    }
+    .main {
+    &__title--position {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__wrapper {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__menu--hidden {
+        display: flex;;
+    }
+
+    &__header {
+        padding-top: 42px;
+        padding-left: 33px;
+        padding-right: 33px;
+        padding-bottom: 16.22px;
+        gap: 8px;
+    }
+    }
+
+    .article {
+    &__text {
+        max-height: 160px;
+        flex-basis: 490px;
+        overflow: hidden;
+    }
+
+    &__content--size {
+        padding-left: 32px;
+    }
+
+    &__content--size {
+        min-width: 490px;
+        min-height: 160px;
+        padding-left:35px;
+        padding-right: 35px;
+
+    }
+
+    &__image {
+        padding-left:0;
+        padding-right: 30px;
+        min-width: 360px;
+        flex:1;
+
+    }
+    }
+    
+
+    .navigation {
+        overflow-x: initial;
+        height: 82px;
+    
+
+    &__link-hidden {
+        display: none;
+    }
+
+    &__list {
+        flex-wrap: wrap;
+        overflow-x: clip;
+    }
+}
+    .main{
+    &__section {
+        padding-bottom: 40px;
+    }
+
+    &__title::before {
+        left: -32px;
+    }
+
+    &__section {
+        padding-bottom: 49px;
+    }
+}
+}
+
