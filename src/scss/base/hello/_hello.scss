@@ -1,4 +1,7 @@
 /* HEADER */
+
+.hello{
+
 .header {
     width: auto;
     height: 88px;
@@ -36,19 +39,7 @@
     }
 }
 
-.menu-burger-button,
-.round-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-}
 
-.menu-burger-button {
-    background-image: url("../img/icon/burgerburger.svg");
-}
 
 .deliver,
 .menu__deliver {
@@ -105,27 +96,6 @@
     background-color: transparent;
     cursor: pointer;
 }
-
-    &__link--call {
-    background-image: url("../img/icon/callcall.svg");
-}
-
-    &__link--write {
-    background-image: url("../img/icon/chatmessage.svg");
-}
-
-    &__link--login {
-    background-image: url("../img/icon/profileuser.svg");
-}
-
-    &__button--status {
-    background-image: url("../img/icon/repairsetting.svg");
-}
-
-   &__button--application {
-    background-image: url("../img/icon/checkstatussearch.svg");
-}
-
 
 }
     .menu--primary {
@@ -255,34 +225,4 @@
     max-height: 350px;
 }
 }
-.button_read-more {
-    width: 138px;
-    height: 24px;
-    padding: 1px;
-    color: $main-text-color;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    text-align: left;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-
-.button_read-more::before {
-    content: "";
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-    background-image: url('../img/icon/expandread-more.svg');
-    background-size: cover;
-    transition: all .5s;
-}
-
-.button_read-less::before {
-transform: rotate3d(1, 0, 0, 180deg);
 }

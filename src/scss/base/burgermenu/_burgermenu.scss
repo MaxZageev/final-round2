@@ -1,14 +1,16 @@
 /* HEADER */
+
+
 .side-menu {
-    height: 100vh;
-    width:320px;
+    min-width:320px;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100%;
     justify-self: start;
     box-shadow: rgb(38, 57, 77) 1px 0px 15px -5px;
-    z-index: -10;
-}
+    z-index: 10;
+    position: sticky;
+
 .header--side {
     height: 97px;
     background: rgb(255, 255, 255);
@@ -35,19 +37,6 @@
     align-items: center;
     
 }
-.menu-burger-button,
-.round-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: transform,box-shadow 1s ;
-}
-.menu-burger-button {
-    background-image: url("../img/icon/burgerexit.svg");
-}
 
 .logo {
     display: flex;
@@ -57,15 +46,9 @@
     margin-left: 17px;
 }
 
-.button-search {
-    background-image: url("../img/icon/search.svg");
-}
-
-
-
-
 /* MAIN */
 .main {
+    height: 100%;
     width: auto;
     display: flex;
     margin-top: 16px;
@@ -120,19 +103,6 @@ footer{
     display: flex;
 }
 
-.menu__link--call.round-icon {
-    background-image: url("../img/icon/callcall.svg");
-}
-
-.menu__link--write.round-icon {
-    background-image: url("../img/icon/chatmessage.svg");
-}
-
-.menu__link--login.round-icon
- {
-    background-image: url("../img/icon/profileuser.svg");
-}
-
 .footer__contact {
     padding: 16px;
     display: flex;
@@ -162,13 +132,4 @@ footer{
 .setings__item--active {
     color: #7E7E82;
 }
-
-.round-icon:hover {
-    box-shadow: rgb(38, 57, 77) 0px 10px 15px -5px;
-    transform: scale(1.2);
-}
-@media screen and (max-width: 767px) {
-    .side-menu {
-        display: none;
-    }
-}
+} 

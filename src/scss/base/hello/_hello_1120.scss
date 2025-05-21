@@ -1,41 +1,11 @@
 @media screen  and (min-width: 1120px) {
+
+.hello{
+
     .header--hello {
         display: none;
     }
 
-    .menu {
-    &__button {
-        color: $main-text-color;
-        font-family: 'TT Lakes', sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
-        letter-spacing: -0.2px;
-        text-align: left;
-        background: none;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    &__button::after {
-        content: "";
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        margin-left: 8px;
-        background-size: cover;
-    }
-
-    &__list li:first-child .menu__button::after {
-        background-image: url("../img/icon/repairsetting.svg");
-    }
-
-    &__list li:last-child .menu__button::after {
-        background-image: url("../img/icon/checkstatussearch.svg");
-    }
-    }
     .main {
     &__title--position {
         margin-top: 0;
@@ -121,4 +91,4 @@
     }
 }
 }
-
+}

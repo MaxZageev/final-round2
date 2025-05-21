@@ -1,0 +1,119 @@
+ .menu__list li:last-child .menu__button::after,.menu__list li:first-child .menu__button::after,.menu-burger-button,
+.round-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform,box-shadow 1s ;
+}
+.round-icon{
+    &:hover {
+    box-shadow: rgb(38, 57, 77) 0px 10px 15px -5px;
+    transform: scale(1.2);
+    }
+}
+.button-search {
+    background-image: url("../img/icon/search.svg");
+}
+
+.menu {
+&-burger-button--exit {
+    background-image: url("../img/icon/burgerexit.svg");
+}
+
+&-burger-button {
+    background-image: url("../img/icon/burgerburger.svg");
+}
+
+&__button {
+        color: $main-text-color;
+        font-family: 'TT Lakes', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-align: left;
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__button::after {
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin-left: 8px;
+        background-size: cover;
+    }
+
+    &__list li:first-child &__button::after {
+        background-image: url("../img/icon/repairsetting.svg");
+    }
+
+    &__list li:last-child &__button::after {
+        background-image: url("../img/icon/checkstatussearch.svg");
+    }
+
+    &__link--call {
+    background-image: url("../img/icon/callcall.svg");
+}
+
+    &__link--write {
+    background-image: url("../img/icon/chatmessage.svg");
+}
+
+    &__link--login {
+    background-image: url("../img/icon/profileuser.svg");
+}
+
+    &__button--status {
+    background-image: url("../img/icon/repairsetting.svg");
+}
+
+   &__button--application {
+    background-image: url("../img/icon/checkstatussearch.svg");
+}
+}
+.button_show-more,.button_read-more {
+    width: 138px;
+    height: 24px;
+    padding-top: 48px;
+    color: rgb(27, 28, 33);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.button_show-more::before,.button_read-more::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    background-image: url('../img/icon/expandread-more.svg');
+    background-size: cover;
+    transition: all .5s;
+}
+
+.button_hide-more::before,.button_read-less::before {
+    transform: rotate3d(1, 0, 0, 180deg);
+}
+
+.button--go {
+    background-image: url(../img/icon/go.svg);
+    margin-right: 16px;
+}
+
+
