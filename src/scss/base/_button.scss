@@ -6,14 +6,8 @@
     text-decoration: none;
     border: none;
     cursor: pointer;
-    transition: transform,box-shadow 1s ;
 }
-.round-icon{
-    &:hover {
-    box-shadow: rgb(38, 57, 77) 0px 10px 15px -5px;
-    transform: scale(1.2);
-    }
-}
+
 .button-search {
     background-image: url("../img/icon/search.svg");
 }
@@ -91,11 +85,6 @@
     margin-right: 8px;
     background-image: url('../img/icon/expandread-more.svg');
     background-size: cover;
-    transition: all .5s;
-}
-
-.button_hide-more::before,.button_read-less::before {
-    transform: rotate3d(1, 0, 0, 180deg);
 }
 
 .button--go {

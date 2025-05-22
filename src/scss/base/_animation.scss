@@ -1,0 +1,22 @@
+.round-icon{
+    transition: transform,box-shadow .5s ;
+    &:hover {
+    box-shadow: rgb(38, 57, 77) 0px 10px 15px -5px;
+    transform: scale(1.2);
+    }
+}
+
+ 
+
+.button_hide-more::before,.button_read-less::before {
+    transform: rotate3d(1, 0, 0, 180deg);
+    transition: all .5s;
+}
+
+.article__text, .card__list {
+    transition: all .5s linear;
+}
+
+.custom-bullet {
+    transition: background-color 0.3s;
+}
