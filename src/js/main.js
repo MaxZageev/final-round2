@@ -5,15 +5,13 @@ import '../index.html';
 //бургер кнопка
 const BurgerOpenBtn = document.querySelectorAll('.menu-burger-button');
 const SideMenu = document.querySelector('.side-menu');
-const blur = document.querySelector('.blur');
+const blurElement = document.getElementById('blur');
 
 for (let BurgerOpenBtn of BurgerOpenBtn) {
 BurgerOpenBtn.addEventListener('click', () =>{
   console.log("клик")
     SideMenu.classList.toggle('side-menu--open');
-    BurgerOpenBtn.classList.toggle('.menu-burger-button--exit'); 
-   
-      blur.style.display = ('flex');
+     blurElement.style.display = (blurElement.style.display === 'none' || blurElement.style.display === '') ? 'flex' : 'none';
 
 })}
 

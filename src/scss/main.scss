@@ -5,13 +5,9 @@
 @import "settings";
 @import "base";
 
- .blur {
-    display: none;
- }
+
 @media screen  and (min-width: 1439px) {
-  .blur {
-    display: none;
-  }
+
   .side-menu { 
     display: flex;
     position: fixed;
@@ -23,12 +19,12 @@
   }
 
   
-  .menu-burger-button, .menu-burger-button--exit {
+  .menu-burger-button {
     display: none;
   }  
 }
 
-.blur {
+#blur {
     backdrop-filter: blur(5px);
     bottom: 0;
     left: 0;
