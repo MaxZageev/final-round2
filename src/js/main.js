@@ -2,6 +2,22 @@ import '../../node_modules/focus-visible/dist/focus-visible';
 import '../scss/main.scss';
 import '../index.html';
 
+//бургер кнопка
+const BurgerOpenBtn = document.querySelectorAll('.menu-burger-button');
+const SideMenu = document.querySelector('.side-menu');
+const blur = document.querySelector('.blur');
+
+for (let BurgerOpenBtn of BurgerOpenBtn) {
+BurgerOpenBtn.addEventListener('click', () =>{
+  console.log("клик")
+    SideMenu.classList.toggle('side-menu--open');
+    BurgerOpenBtn.classList.toggle('.menu-burger-button--exit'); 
+   
+      blur.style.display = ('flex');
+
+})}
+
+
 // кнопка скрыть/показать
 const ReadMoreBtn = document.querySelector('.button_read-more');
 const ArticleTextContainer = document.querySelector('.article__text--size');

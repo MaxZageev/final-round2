@@ -5,21 +5,42 @@
 @import "settings";
 @import "base";
 
-@media screen  and (max-width: 1120px) {
-  .side-menu { 
+ .blur {
+    display: none;
+ }
+@media screen  and (min-width: 1439px) {
+  .blur {
     display: none;
   }
-
-  .logo {
-    margin-left: 17px;
-  }
-  .menu-burger-button--exit {
+  .side-menu { 
     display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+  .window {
+    padding-left: 320px;
+  }
+
+  
+  .menu-burger-button, .menu-burger-button--exit {
+    display: none;
   }  
 }
 
+.blur {
+    backdrop-filter: blur(5px);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 20;
+}
 body {
   display: flex;
+  overflow-x: hidden;
+  transition: display .5s linear;
 }
 *,
 *:after,

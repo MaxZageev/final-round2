@@ -34,8 +34,9 @@ h1, h2, h3, h4, h5, h6, p {
 img {
   height: auto;
   max-width: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
+//img { width: auto;height: auto;max-width: none;max-height: none;object-fit: none;
 
 ul {
   margin: 0;
@@ -86,19 +87,3 @@ textarea:focus {
   border: 2px var(--error-red) solid !important;
 }
 
-.container {
-  max-width: 1810px;
-  margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
-
-  @media (max-width: 1200px) {
-    padding-right: 50px;
-    padding-left: 50px;
-  }
-
-  @media (max-width: 576px) {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
-}

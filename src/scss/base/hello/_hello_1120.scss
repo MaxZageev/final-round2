@@ -1,11 +1,11 @@
-@media screen  and (min-width: 1120px) {
+@media screen  and (min-width: 1439px) {
 
 .hello{
-
+    width: calc(100vw - 320px);
     .header--hello {
         display: none;
     }
-
+    
     .main {
     &__title--position {
         margin-top: 0;
@@ -16,11 +16,15 @@
         flex-direction: row;
         align-items: center;
     }
-
-    &__menu--hidden {
-        display: flex;;
+    
+    &__menu {
+    
+    &--hidden {
+        display: flex;
+        justify-content:space-between;
+    
+    } 
     }
-
     &__header {
         padding-top: 42px;
         padding-left: 33px;
@@ -31,6 +35,7 @@
     }
 
     .article {
+      width: calc(100vw - 320px);  
     &__text {
         max-height: 160px;
         flex-basis: 490px;
@@ -46,7 +51,7 @@
     }
 
     &__content--size {
-        min-width: 490px;
+        width: calc(44vw);
         min-height: 160px;
         padding-left:35px;
         padding-right: 35px;
@@ -56,7 +61,7 @@
     &__image {
         padding-left:0;
         padding-right: 30px;
-        min-width: 360px;
+        width: calc(32vw);
         flex:1;
 
     }

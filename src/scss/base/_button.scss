@@ -1,4 +1,4 @@
- .menu__list li:last-child .menu__button::after,.menu__list li:first-child .menu__button::after,.menu-burger-button,
+.menu-burger-button,
 .round-icon {
     width: 40px;
     height: 40px;
@@ -18,14 +18,9 @@
     background-image: url("../img/icon/search.svg");
 }
 
-.menu {
-&-burger-button--exit {
-    background-image: url("../img/icon/burgerexit.svg");
-}
 
-&-burger-button {
-    background-image: url("../img/icon/burgerburger.svg");
-}
+
+.menu {
 
 &__button {
         color: $main-text-color;
@@ -42,22 +37,14 @@
         justify-content: space-between;
     }
 
-    &__button::after {
-        content: "";
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        margin-left: 8px;
-        background-size: cover;
-    }
+    &-burger-button {
+    background-image: url("../img/icon/burgerburger.svg");
 
-    &__list li:first-child &__button::after {
-        background-image: url("../img/icon/repairsetting.svg");
-    }
+    &--exit {
+    background-image: url("../img/icon/burgerexit.svg");
+}
+}
 
-    &__list li:last-child &__button::after {
-        background-image: url("../img/icon/checkstatussearch.svg");
-    }
 
     &__link--call {
     background-image: url("../img/icon/callcall.svg");
@@ -115,5 +102,8 @@
     background-image: url(../img/icon/go.svg);
     margin-right: 16px;
 }
-
+.aria-label {
+        padding-right: 8px;
+        cursor: pointer;
+    }
 
