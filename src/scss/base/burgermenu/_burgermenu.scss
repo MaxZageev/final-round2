@@ -1,153 +1,161 @@
-/* HEADER */
-
+/* ==========================================================================
+   SIDE MENU (Мобильное боковое меню)
+   ========================================================================== */
 
 .side-menu {
-    background: rgb(255, 255, 255);
-    opacity: 1;
-    z-index: 1000;
-    min-width:320px;
-    display: none;
-    flex-direction: column;
-    height: 100vh;
-    justify-self: start;
-    box-shadow: rgb(38, 57, 77) 1px 0px 15px -5px;
-    position: relative;
-    overflow: hidden;
-&--open {
+  background: #fff;
+  opacity: 1;
+  z-index: 1000;
+  min-width: 320px;
+  display: none;
+  flex-direction: column;
+  height: 100vh;
+  justify-self: start;
+  box-shadow: rgba(38, 57, 77, 0.7) 1px 0px 15px -5px;
+  position: relative;
+  overflow: hidden;
+
+  &--open {
     display: flex;
     position: fixed;
     left: 0;
     bottom: 0;
-    
-    
-}
+  }
 
-
-.header--side {
+  /* ======================
+     HEADER внутри меню
+     ====================== */
+  .header--side {
     height: 97px;
-    background: rgb(255, 255, 255);
+    background: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 14px;
-    padding-left: 24px;
-    padding-right: 24px;
-}
+    padding: 14px 24px 0;
+  }
 
-.header__wrapper,.header__wrapper-search {
-    
+  .header__wrapper,
+  .header__wrapper-search {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-}
-.wrapper__list {
-    
+  }
+
+  .wrapper__list {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
     align-items: center;
-    
-}
+  }
 
-.logo {
+  .logo {
     display: flex;
     justify-content: flex-start;
     width: 97px;
     height: 51px;
-}
+  }
 
-/* MAIN */
-.main {
+  /* ======================
+     MAIN контент
+     ====================== */
+  .main {
     height: 100%;
     width: auto;
     display: flex;
     margin-top: 16px;
-}
-.navigation__item {
+  }
+
+  .navigation__item {
     display: flex;
-    width: auto;
-    height: 32px;
     align-items: center;
+    height: 32px;
     padding-left: 24px;
     margin-bottom: 24px;
+    width: auto;
+  }
 
-}
-.navigation__link {
-    font-weight: medium;
-}
-.navigation__item--active {
-    border-left: solid 4px #41F6D7;
-    border-collapse: collapse;
-    overflow: hidden;
+  .navigation__link {
+    font-weight: 500; // заменено на валидное значение
+  }
+
+  .navigation__item--active {
+    border-left: 4px solid #41F6D7;
     position: relative;
     padding-left: 22px;
     left: -2px;
     color: #7E7E82;
-}
-/* FOOTER */
-footer{
-    
+  }
+
+  /* ======================
+     FOOTER
+     ====================== */
+  footer {
     margin-top: auto;
     height: 220px;
-}
-.menu {
+  }
+
+  .menu {
     display: flex;
     justify-content: flex-start;
-}
-.menu__list {
-    
+  }
+
+  .menu__list {
     margin: 0;
     padding-left: 24px;
     list-style: none;
     display: flex;
     gap: 17px;
-}
+  }
 
-.menu__item,
-.menu__link--button {
+  .menu__item,
+  .menu__link--button {
     margin: 0;
     padding: 0;
-}
+  }
 
-.menu__link {
+  .menu__link {
     display: flex;
-}
+  }
 
-.footer__contact {
-    padding: 16px;
+  .footer__contact {
     display: flex;
-    padding-left: 24px;
-}
+    padding: 16px 0 0 24px;
+  }
 
-.contact__item {
+  .contact__item {
     margin-bottom: 24px;
-}
+  }
 
-.mail {
-    font-weight: medium;
-}
-.nomber {
+  .mail {
+    font-weight: 500;
+  }
+
+  .nomber {
     font-weight: 900;
     font-size: 24px;
-}
-.setings__list {
+  }
+
+  .setings__list {
     margin: 0;
     padding-left: 24px;
     list-style: none;
     display: flex;
     gap: 8px;
-    font-weight: medium;
+    font-weight: 500;
+  }
+
+  .setings__item--active {
+    color: #7E7E82;
+  }
 }
 
-.setings__item--active {
-    color: #7E7E82;
-}
-} 
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
 
 @media screen and (max-width: 360px) {
-    .side-menu {
-        width: calc(100vw);   
-    }
-
+  .side-menu {
+    width: 100vw;
+  }
 }

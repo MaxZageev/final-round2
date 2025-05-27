@@ -1,99 +1,79 @@
-@media screen  and (min-width: 1439px) {
-
-.hello{
+@media screen and (min-width: 1439px) {
+  .hello {
     width: calc(100vw - 320px);
+
     .header--hello {
-        display: none;
-    }
-    
-    .main {
-    &__title--position {
-        margin-top: 0;
-        margin-bottom: 0;
+      display: none;
     }
 
-    &__wrapper {
+    .main {
+      &__title--position {
+        margin: 0;
+      }
+
+      &__wrapper {
         flex-direction: row;
         align-items: center;
-    }
-    
-    &__menu {
-    
-    &--hidden {
+      }
+
+      &__menu--hidden {
         display: flex;
-        justify-content:space-between;
-    
-    } 
-    }
-    &__header {
-        padding-top: 42px;
-        padding-left: 33px;
-        padding-right: 33px;
-        padding-bottom: 16.22px;
+        justify-content: space-between;
+      }
+
+      &__header {
+        padding: 42px 33px 16.22px 33px;
         gap: 8px;
-    }
+      }
+
+      &__section {
+        padding-bottom: 49px;
+      }
+
+      &__title::before {
+        left: -32px;
+      }
     }
 
     .article {
-      width: calc(100vw - 320px);  
-    &__text {
+      width: calc(100vw - 320px);
+
+      &__text {
         max-height: 160px;
         flex-basis: 490px;
         overflow: hidden;
 
         &--less {
-            max-height: 100vh;
+          max-height: 100vh;
         }
-    }
+      }
 
-    &__content--size {
-        padding-left: 32px;
-    }
-
-    &__content--size {
+      &__content--size {
         width: calc(44vw);
         min-height: 160px;
-        padding-left:35px;
-        padding-right: 35px;
+        padding: 0 35px 0 32px;
+      }
 
-    }
-
-    &__image {
-        padding-left:0;
-        padding-right: 30px;
+      &__image {
         width: calc(32vw);
-        flex:1;
-
+        flex: 1;
+        padding-right: 30px;
+        padding-left: 0;
+      }
     }
-    }
-    
 
     .navigation {
-        overflow-x: initial;
-        height: 82px;
-    
+      overflow-x: initial;
+      height: 82px;
 
-    &__link-hidden {
+      &__link-hidden {
         display: none;
-    }
+      }
 
-    &__list {
+      &__list {
         flex-wrap: wrap;
         overflow-x: clip;
+      }
     }
-}
-    .main{
-    &__section {
-        padding-bottom: 40px;
-    }
-
-    &__title::before {
-        left: -32px;
-    }
-
-    &__section {
-        padding-bottom: 49px;
-    }
-}
-}
+  }
 }

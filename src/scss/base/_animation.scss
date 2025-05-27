@@ -1,25 +1,50 @@
-.round-icon{
-    transition: transform,box-shadow .5s ;
-    &:hover {
-    box-shadow: rgb(38, 57, 77) 0px 10px 15px -5px;
-    transform: scale(1.2);
-    }
+/* ==========================================================================
+   АНИМАЦИИ И ЭФФЕКТЫ НАВЕДЕНИЯ
+   ========================================================================== */
+
+/* Иконка с круглым фоном — масштабирование и тень при наведении */
+.round-icon {
+  transition: transform 0.5s, box-shadow 0.5s;
+
+  &:hover {
+    transform: scale(1.1);
+     box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1),
+              inset -2px -2px 5px rgba(255, 198, 198, 0.7);
+  }
+  
 }
 
- 
+/* ==========================================================================
+   АНИМАЦИЯ КНОПОК "ПОКАЗАТЬ ЕЩЁ / СВЕРНУТЬ"
+   ========================================================================== */
 
-.button_hide-more::before,.button_read-less::before {
-    transform: rotate3d(1, 0, 0, 180deg);
-    transition: all .5s;
-}
-.button_show-more::before,.button_read-more::before {
-    transition: all .5s;
+/* Анимация поворота стрелки вверх при сворачивании текста */
+.button_hide-more::before,
+.button_read-less::before {
+  transform: rotate3d(1, 0, 0, 180deg);
+  transition: all 0.5s;
 }
 
-.article__text, .card__list {
-    transition: all .5s linear;
+/* Анимация стрелки вниз (по умолчанию) */
+.button_show-more::before,
+.button_read-more::before {
+  transition: all 0.5s;
 }
+
+/* ==========================================================================
+   АНИМАЦИЯ РАЗВОРАЧИВАНИЯ КОНТЕНТА
+   ========================================================================== */
+
+/* Плавное раскрытие текста и карточек */
+.article__text,
+.card__list {
+  transition: all 0.5s linear;
+}
+
+/* ==========================================================================
+   КАСТОМНЫЕ БУЛЛЕТЫ SWIPER-ПАГИНАЦИИ
+   ========================================================================== */
 
 .custom-bullet {
-    transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }

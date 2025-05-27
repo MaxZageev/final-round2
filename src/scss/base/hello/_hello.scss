@@ -1,87 +1,92 @@
-/* HEADER */
+/* =====================================
+   HEADER
+===================================== */
 
-.hello{
-     width: calc(100vw);
-.header {
-    width: calc(100vw);
+.hello {
+  width: 100vw;
+
+  .header {
+    width: 100vw;
     height: 88px;
     background: $white-background;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 0 16px;
     border-bottom: 1px solid $hello-background;
     overflow: hidden;
     position: sticky;
     top: 0;
     z-index: 10;
- 
-    &__wrapper {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 
-        &__list {
+    &__wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      &__list {
         margin: 0;
         padding: 0;
         list-style: none;
         display: flex;
         align-items: center;
-    
-        }
-    }   
-    
+      }
+    }
+
     &__deliver--hidden {
-    display: none;
+      display: none;
     }
-    
+
     &__wrapper-menu {
-    display: flex;   
-    align-items: center;
+      display: flex;
+      align-items: center;
     }
-}
+  }
 
-
-
-.deliver,
-.menu__deliver {
+  .deliver,
+  .menu__deliver {
     width: 2px;
     height: 32px;
     background: $deliver-color;
     margin-left: 20px;
-}
-.menu__deliver{
-    margin-right: 20px;
-}
+  }
 
-.logo {
+  .menu__deliver {
+    margin-right: 20px;
+  }
+
+  .logo {
     display: flex;
     justify-content: flex-start;
     width: 97px;
     height: 51px;
-    
-}
+  }
 
-/* MENU */
+
+
+/* =====================================
+   MENU
+===================================== */
+
 .menu {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 
-    &__list {
+  &__list {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
     gap: 16px;
-}
+  }
 
-    &__item,&__link--button {
+  &__item,
+  &__link--button {
     margin: 0;
     padding: 0;
-}
+  }
 
-    &__link {
+  &__link {
     text-decoration: none;
     color: $main-text-color;
     font-size: 16px;
@@ -91,104 +96,111 @@
     text-align: left;
     display: inline-flex;
     align-items: center;
-}
+  }
 
-    &__link--button {
+  &__link--button {
     padding: 8px 16px;
     border: none;
     background-color: transparent;
     cursor: pointer;
+  }
 }
 
-}
-    .menu--primary {
-    display: none;
+.menu--primary {
+  display: none;
 }
 
-/* MAIN */
+
+/* =====================================
+   MAIN
+===================================== */
+
 .main {
-    margin: 0;
-    padding: 0;
-    min-width: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: $background;
+  margin: 0;
+  padding: 0;
+  min-width: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $background;
 
-    &__wrapper {
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     position: relative;
-}
+  }
 
-    &__button {
+  &__button {
     cursor: pointer;
-}
+  }
 
-    &__header {
+  &__header {
     display: flex;
     flex-direction: column;
-    padding-left: 12px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 24px 0 24px 12px;
     gap: 16px;
     overflow: visible;
     background: transparent;
-}
+  }
 
-    &__menu--hidden {
+  &__menu--hidden {
     display: none;
-}
+  }
 
-    &__section {
+  &__section {
     flex-basis: auto;
     padding-bottom: 35px;
-}
+  }
 
-    &__title {
+  &__title {
     margin: 0;
     height: 40px;
     position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -13px;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 1px;
+      width: 4px;
+      height: 40px;
+      background: $anchor-item;
+    }
+  }
 }
 
-    &__title::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: -13px;
-    top: 50%;
-    margin-top: -20px;
-    margin-right: 16px;
-    border-radius: 1px;
-    width: 4px;
-    height: 40px;
-    background: $anchor-item;
-}
-}
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
 .navigation {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    height: 60px;
-    white-space: nowrap;
-    display: flex;
-    overflow-x: hidden;
+  width: 100%;
+  height: 60px;
+  white-space: nowrap;
+  display: flex;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
 
-    &__list {
+  &__list {
     margin: 0;
     padding: 0;
     display: flex;
     list-style: none;
     align-items: center;
     position: relative;
-}
+  }
 
-    &__item {
+  &__item {
     margin: 0;
     padding: 0;
     flex-shrink: 0;
-}
+  }
 
-    &__link {
+  &__link {
     text-decoration: none;
     color: $active-item;
     font-size: 16px;
@@ -197,36 +209,40 @@
     letter-spacing: -0.2px;
     text-align: left;
     padding: 8px 16px;
+  }
 
-}
-
-    &__link--active {
+  &__link--active {
     border: 2px solid $focus-item;
     border-radius: 6px;
+  }
 }
-}
+
+
+/* =====================================
+   ARTICLE
+===================================== */
+
 .article {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
 
-
-    &__content {
+  &__content {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    
-}
+  }
 
-    &__text {
+  &__text {
     text-align: left;
     padding: 0;
     margin: 0;
-}
-    &__image {
+  }
+
+  &__image {
     border-radius: 10px;
     width: 100%;
     max-height: 350px;
-}
+  }
 }
 }

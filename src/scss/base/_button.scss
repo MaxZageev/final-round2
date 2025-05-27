@@ -1,100 +1,122 @@
+// =====================================
+// Универсальные кнопки и иконки
+// =====================================
+
 .menu-burger-button,
 .round-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
 }
 
+// Кнопка поиска
 .button-search {
-    background-image: url("../img/icon/search.svg");
+  background-image: url("../img/icon/search.svg");
 }
 
+// Кнопки "показать ещё", "читать далее"
+.button_show-more,
+.button_read-more {
+  width: 138px;
+  height: 24px;
+  padding-top: 48px;
+  color: rgb(27, 28, 33);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+// Иконка стрелки перед текстом в кнопках
+.button_show-more::before,
+.button_read-more::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  background-image: url("../img/icon/expandread-more.svg");
+  background-size: cover;
+}
+
+// =====================================
+// Иконки навигации и действий
+// =====================================
+
+.button--go {
+  background-image: url("../img/icon/go.svg");
+  margin-right: 16px;
+}
+
+.button--goside {
+  background-image: url("../img/icon/goside.svg");
+  width: 24px;
+  height: 24px;
+}
+
+
+// =====================================
+// Дополнительные метки
+// =====================================
+
+.aria-label {
+  padding-right: 8px;
+  cursor: pointer;
+}
+
+// =====================================
+// Меню и его элементы
+// =====================================
 
 .menu {
-
-&__button {
-        color: $main-text-color;
-        font-family: 'TT Lakes', sans-serif;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
-        letter-spacing: -0.2px;
-        text-align: left;
-        background: none;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    &-burger-button {
-    background-image: url("../img/icon/burgerburger.svg");  
-    }
-
-    &__link--call {
-    background-image: url("../img/icon/callcall.svg");
-}
-
-    &__link--write {
-    background-image: url("../img/icon/chatmessage.svg");
-}
-
-    &__link--login {
-    background-image: url("../img/icon/profileuser.svg");
-}
-
-    &__button--status {
-    background-image: url("../img/icon/repairsetting.svg");
-}
-
-   &__button--application {
-    background-image: url("../img/icon/checkstatussearch.svg");
-}
-}
-.button_show-more,.button_read-more {
-    width: 138px;
-    height: 24px;
-    padding-top: 48px;
-    color: rgb(27, 28, 33);
+  &__button {
+    color: $main-text-color;
+    font-family: 'TT Lakes', sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
+    letter-spacing: -0.2px;
     text-align: left;
-    background-color: transparent;
+    background: none;
     border: none;
-    cursor: pointer;
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    flex-wrap: nowrap;
-}
+    justify-content: space-between;
+  }
 
-.button_show-more::before,.button_read-more::before {
-    content: "";
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-    background-image: url('../img/icon/expandread-more.svg');
-    background-size: cover;
-}
+  &-burger-button {
+    background-image: url("../img/icon/burgerburger.svg");
+  }
 
-.button--go {
-    background-image: url(../img/icon/go.svg);
-    margin-right: 16px;
-}
-.button--goside {
-    background-image: url(../img/icon/goside.svg);
-    width: 24px;
-    height: 24px;
-}
-.aria-label {
-        padding-right: 8px;
-        cursor: pointer;
-    }
+  &__link--call {
+    background-image: url("../img/icon/callcall.svg");
+  }
 
+  &__link--write {
+    background-image: url("../img/icon/chatmessage.svg");
+  }
+
+  &__link--login {
+    background-image: url("../img/icon/profileuser.svg");
+  }
+
+  &__button--status {
+    background-image: url("../img/icon/repairsetting.svg");
+  }
+
+  &__button--application {
+    background-image: url("../img/icon/checkstatussearch.svg");
+  }
+}
 .exit {
-    background-image: url("../img/icon/burgerexit.svg");
+  background-image: url("../img/icon/burgerexit.svg");
 }

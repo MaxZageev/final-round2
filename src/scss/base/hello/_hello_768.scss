@@ -1,92 +1,84 @@
 @media screen and (min-width: 767px) {
-.side-menu{
-    .logo{
-    padding-left: 17px;
-    }
-}
-
-
-.hello{
+  .side-menu {
     .logo {
-        padding-left: 17px;
+      padding-left: 17px;
     }
-    width: calc(100vw);
-    .navigation {
-        overflow-x: auto;
-        overflow-y: hidden;
-        overflow-x: visible;
-        
+  }
+
+  .hello {
+    width: 100vw;
+
+    .logo {
+      padding-left: 17px;
     }
 
-    .navigation::-webkit-scrollbar {
-    display: none;
-}
+    .navigation {
+      overflow-x: visible;
+      overflow-y: hidden;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
 
     .header--hello {
-        padding-left: 24px;
-        padding-right: 24px;
+      padding-left: 24px;
+      padding-right: 24px;
     }
 
     .menu__button,
     .menu--primary {
-        display: flex;
+      display: flex;
+    }
+
+    .header__deliver--hidden {
+      display: block;
     }
 
     .main {
-    &__header {
-        padding-top: 24px;
-        padding-left: 25px;
-        padding-bottom: 32px;
+      &__header {
+        padding: 24px 0 32px 25px;
         gap: 22px;
         overflow: hidden;
-    }
+      }
 
-    &__title::before {
+      &__title::before {
         left: -24px;
-    }
-}
-
-    .header__deliver--hidden {
-        display: block;
+      }
     }
 
     .article {
-        width: calc(100vw);
-        padding: 0;
-        flex-direction: row;
-        justify-content: center;
-    
+      width: 100vw;
+      padding: 0;
+      flex-direction: row;
+      justify-content: center;
 
-    &__text {
+      &__text {
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
         letter-spacing: 0.2px;
         text-align: left;
         max-height: 160px;
-        width: calc(40vw);
+        width: 40vw;
         overflow-y: hidden;
         overflow-x: visible;
 
-         &--less {
-            max-height: 100vh;
+        &--less {
+          max-height: 100vh;
         }
-    }
+      }
 
-    &__content--size,
-    &__image {
+      &__content--size {
         padding: 0 25px;
-    }
-
-    &__content--size {
         align-self: flex-start;
         flex: 1;
-    }
+      }
 
-    &__image {
-        width: calc(46vw);
-        
+      &__image {
+        padding: 0 25px;
+        width: 46vw;
+      }
     }
-    }
-}
+  }
 }
