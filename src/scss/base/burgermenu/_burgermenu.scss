@@ -144,3 +144,10 @@ footer{
     color: #7E7E82;
 }
 } 
+
+@media screen and (max-width: 360px) {
+    .side-menu {
+        width: calc(100vw);   
+    }
+
+}

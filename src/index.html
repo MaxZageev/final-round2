@@ -19,7 +19,7 @@
     <ul class="wrapper__list">
         <li>
             <div class="header__wrapper wrapper">
-            <div class="menu-burger-button--exit menu-burger-button  round-icon" aria-label="закрыть меню"><span hidden="hidden">закрыть меню</span></div>
+            <div class="exit menu-burger-button  round-icon" aria-label="закрыть меню"><span hidden="hidden">закрыть меню</span></div>
         </li>
         <li>
             <div class="header__logo logo">
@@ -82,6 +82,64 @@
         </ul>
     </div>
 </footer>
+</div>
+
+<div class="modal modal--feedback">
+  <div class="modal__content">
+    <button class="modal__close menu__link--write exit round-icon" aria-label="Закрыть"></button>
+    <h2 class="modal__title">Обратная связь</h2>
+
+    <form class="form form--feedback">
+      <div class="form__group">
+        <input class="form__input" type="text" name="name" placeholder="Имя" />
+      </div>
+      <div class="form__group">
+        <input class="form__input" type="tel" name="phone" placeholder="Телефон" />
+      </div>
+      <div class="form__group">
+        <input class="form__input" type="email" name="email" placeholder="Электронная почта" />
+      </div>
+      <div class="form__group">
+        <textarea class="form__textarea" name="message" placeholder="Сообщение"></textarea>
+      </div>
+
+      <p class="form__privacy">
+        Нажимая “отправить”, вы даете согласие на
+        <a href="#" class="form__link">обработку персональных данных</a>
+        и соглашаетесь с нашей
+        <a href="#" class="form__link">политикой конфиденциальности</a>
+      </p>
+
+      <button type="submit" class="form__submit button button--accent">
+        Отправить
+        <div class="button--goside ">
+      </button>
+    </form>
+  </div>
+</div>
+
+<div class="modal modal--call">
+     <div class="modal__content">
+    <button class="modal__close menu__link--call exit round-icon" aria-label="Закрыть"></button>
+    <h2 class="modal__title">Заказать Звонок</h2>
+
+    <form class="form form--call">
+      <div class="form__group">
+        <input class="form__input" type="tel" name="phone" placeholder="Телефон" />
+      </div>
+      <p class="form__privacy">
+        Нажимая “отправить”, вы даете согласие на
+        <a href="#" class="form__link">обработку персональных данных</a>
+        и соглашаетесь с нашей
+        <a href="#" class="form__link">политикой конфиденциальности</a>
+      </p>
+
+      <button type="submit" class="form__submit button button--accent">
+        Отправить
+        <div class="button--goside ">
+      </button>
+    </form>
+  </div>
 </div>
 
 <div class="window">

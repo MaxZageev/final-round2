@@ -13,7 +13,6 @@
 }
 
 
-
 .menu {
 
 &__button {
@@ -32,13 +31,8 @@
     }
 
     &-burger-button {
-    background-image: url("../img/icon/burgerburger.svg");
-
-    &--exit {
-    background-image: url("../img/icon/burgerexit.svg");
-}
-}
-
+    background-image: url("../img/icon/burgerburger.svg");  
+    }
 
     &__link--call {
     background-image: url("../img/icon/callcall.svg");
@@ -91,8 +85,16 @@
     background-image: url(../img/icon/go.svg);
     margin-right: 16px;
 }
+.button--goside {
+    background-image: url(../img/icon/goside.svg);
+    width: 24px;
+    height: 24px;
+}
 .aria-label {
         padding-right: 8px;
         cursor: pointer;
     }
 
+.exit {
+    background-image: url("../img/icon/burgerexit.svg");
+}

@@ -11,12 +11,74 @@ for (let BurgerOpenBtn of BurgerOpenBtn) {
 BurgerOpenBtn.addEventListener('click', () =>{
   console.log("клик")
     SideMenu.classList.toggle('side-menu--open');
-     blurElement.style.display = (blurElement.style.display === 'none' || blurElement.style.display === '') ? 'flex' : 'none';
 
 })}
 
+//вызов фидбек
+const feedModalBtn = document.querySelectorAll('.menu__link--write');
+const feedModal = document.querySelector('.modal--feedback');
 
-// кнопка скрыть/показать
+for (let feedModalBtn of feedModalBtn) {
+feedModalBtn.addEventListener('click', () =>{
+  console.log("клик")
+    feedModal.classList.toggle('modal--feedback--open');
+    callModal.classList.remove('modal--call--open');
+
+})}
+
+//запрос звонка
+const callModalBtn = document.querySelectorAll('.menu__link--call');
+const callModal = document.querySelector('.modal--call');
+
+for (let callModalBtn of callModalBtn) {
+callModalBtn.addEventListener('click', () =>{
+  console.log("клик")
+    callModal.classList.toggle('modal--call--open');
+    feedModal.classList.remove('modal--feedback--open');
+})}
+// закрытие окон при нажатии на блюр область
+const observer = new MutationObserver(() => {
+  const openElement = [...document.querySelectorAll('[class$="--open"]')].find(el =>
+    [...el.classList].some(className => className.endsWith('--open'))
+  );
+
+  if (openElement) {
+    blurElement.style.display = ('flex')
+    console.log('Элемент с --open найден:', openElement);
+    
+  } else {
+    blurElement.style.display = ('none')
+    console.log('Элемент с --open отсутствует');
+    
+  }
+});
+
+// Наблюдение за изменениями в <body>
+observer.observe(document.body, {
+  childList: true,
+  subtree: true,
+  attributes: true,
+  attributeFilter: ['class'],
+});
+
+blurElement.addEventListener('click', () => {
+  // Прячем сам blur
+  blurElement.style.display = 'none';
+
+  // Ищем все элементы с классами, заканчивающимися на --open
+  const openElements = document.querySelectorAll('[class$="--open"]');
+
+  openElements.forEach((el) => {
+    // Перебираем все классы элемента
+    el.classList.forEach((cls) => {
+      if (cls.endsWith('--open')) {
+        el.classList.remove(cls);
+      }
+    });
+  });
+});
+
+// кнопка скрыть/показать текст
 const ReadMoreBtn = document.querySelector('.button_read-more');
 const ArticleTextContainer = document.querySelector('.article__text--size');
 ReadMoreBtn.addEventListener('click', () => {
@@ -31,7 +93,7 @@ ReadMoreBtn.addEventListener('click', () => {
 });
 
 
-// кнопка скрыть/показать
+// кнопка скрыть/показать карточки
 const showMoreBtn = document.querySelector('.button_show-more');
 const cardListContainer = document.querySelector('.card__list');
 showMoreBtn.addEventListener('click', () => {

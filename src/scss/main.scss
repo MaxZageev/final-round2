@@ -8,16 +8,24 @@
 
 @media screen  and (min-width: 1439px) {
 
+.window {
+  z-index: -1;
+}
+
   .side-menu { 
     display: flex;
     position: fixed;
     left: 0;
     bottom: 0;
+
+    .logo {
+    padding-left: 0px;
+  }
   }
   .window {
     padding-left: 320px;
   }
-
+  
   
   .menu-burger-button {
     display: none;
