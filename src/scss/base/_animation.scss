@@ -12,6 +12,9 @@
     transform: rotate3d(1, 0, 0, 180deg);
     transition: all .5s;
 }
+.button_show-more::before,.button_read-more::before {
+    transition: all .5s;
+}
 
 .article__text, .card__list {
     transition: all .5s linear;

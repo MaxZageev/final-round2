@@ -49,8 +49,6 @@
     justify-content: space-between;
     border-radius: 6px;
     border: solid 1px #EAEAEA;
-    width: 240px;
-    height: 72px;
     background-color: #ffffff;
 } 
 .card__brand {
@@ -58,7 +56,33 @@
     width: auto;
     height: auto;
 }
+}
 
+.swiper--brand{
+  .card__item {
+    width: 240px;
+    height: 72px;
+}
+}
+.swiper--repear{
+  .card__repear{
+    padding: 18px;
+    font-weight: medium;
+    align-self: start;
+    justify-self: start;
+  }
+  .card__item {
+
+    width: 240px;
+    height: 160px;
+}
+
+  .button--go{
+    align-self: end;
+    justify-self: end;
+        margin-bottom: 18px;
+  }
+}
 /* Блок мобильного свайпера */
 
 .brands-mobile {
@@ -120,4 +144,3 @@
   }
 
 
-}

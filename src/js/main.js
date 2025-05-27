@@ -53,7 +53,7 @@ const observer = new MutationObserver(() => {
   }
 });
 
-// Наблюдение за изменениями в <body>
+// Обсервер вардик на мид и следим за изменениями в <body>
 observer.observe(document.body, {
   childList: true,
   subtree: true,
@@ -62,14 +62,14 @@ observer.observe(document.body, {
 });
 
 blurElement.addEventListener('click', () => {
-  // Прячем сам blur
+  
   blurElement.style.display = 'none';
 
   // Ищем все элементы с классами, заканчивающимися на --open
   const openElements = document.querySelectorAll('[class$="--open"]');
 
   openElements.forEach((el) => {
-    // Перебираем все классы элемента
+    
     el.classList.forEach((cls) => {
       if (cls.endsWith('--open')) {
         el.classList.remove(cls);
@@ -93,86 +93,79 @@ ReadMoreBtn.addEventListener('click', () => {
 });
 
 
-// кнопка скрыть/показать карточки
-const showMoreBtn = document.querySelector('.button_show-more');
-const cardListContainer = document.querySelector('.card__list');
-showMoreBtn.addEventListener('click', () => {
-    cardListContainer.classList.toggle('card__list--show');
-    showMoreBtn.classList.toggle('button_hide-more');
-    const hideMoreBth = document.querySelector('.button_hide-more')
-    if (hideMoreBth){
-    hideMoreBth.textContent = 'Скрыть';
-    } else {
-    showMoreBtn.textContent = 'Показать всё';
-    }
+const showMoreButtons = document.querySelectorAll('.button_show-more');
+
+showMoreButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        // Находим ближайший родитель .brands-desktop или .repear-desktop
+        const parentContainer = btn.closest('.brands-desktop, .repear-desktop');
+        // Находим список внутри этого контейнера
+        const cardList = parentContainer.querySelector('.card__list');
+
+        // Переключаем класс отображения карточек
+        cardList.classList.toggle('card__list--show');
+        btn.classList.toggle('button_hide-more');
+
+        // Меняем текст кнопки
+        if (btn.classList.contains('button_hide-more')) {
+            btn.textContent = 'Скрыть';
+        } else {
+            btn.textContent = 'Показать всё';
+        }
+    });
 });
 
+
 // втавляем разметку свайпера на мобилки
-const mainCard = document.querySelector('.main__card');
-if (window.innerWidth <= 750 && mainCard) {
+function createMobileSwiper(mainCardSelector, swiperClassName) {
+  const mainCard = document.querySelector(mainCardSelector);
+  if (!mainCard) return;
+
+  const cardList = mainCard.querySelector('.card__list');
+  const showMoreBtn = mainCard.querySelector('.button_show-more');
+
+  if (!cardList) return;
+
+  const items = Array.from(cardList.children);
+  const slidesHTML = items
+    .map(item => {
+      const content = item.innerHTML;
+      return `<div class="swiper-slide">${content}</div>`;
+    })
+    .join('');
+
   const swiperContainerHTML = `
-    <div class="brands-mobile card__swiper">
+    <div class="${swiperClassName} card__swiper">
       <div class="swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img class="card__brand" src="img/lenovoBitmap.svg" alt="Lenovo">
-            <div class="button--go round-icon"></div>
-          </div>
-          <div class="swiper-slide">
-            <img class="card__brand" src="img/SamsungBitmap.svg" alt="Samsung">
-            <div class="button--go round-icon"></div>
-          </div>
-          <div class="swiper-slide">
-            <img class="card__brand" src="img/AppleBitmap.svg" alt="Apple">
-            <div class="button--go round-icon"></div>
-          </div>
-          <div class="swiper-slide">
-            <img class="card__brand" src="img/SonicBitmap.svg" alt="Sonic">
-            <div class="button--go round-icon"></div>
-          </div>
-          <div class="swiper-slide">
-            <img class="card__brand" src="img/BoschBitmap.svg" alt="Bosch">
-            <div class="button--go round-icon"></div>
-          </div>
-          <div class="swiper-slide">
-            <img class="card__brand" src="img/HpBitmap.svg" alt="HP">
-            <div class="button--go round-icon"></div>
-          </div>
-          <div class="swiper-slide">
-            <img class="card__brand" src="img/AcerBitmap.svg" alt="Acer">
-            <div class="button--go round-icon"></div>
-          </div>
-          <div class="swiper-slide">
-            <img class="card__brand" src="img/SonyBitmap.svg" alt="Sony">
-            <div class="button--go round-icon"></div>
-          </div>
+          ${slidesHTML}
         </div>
-        
       </div>
       <div class="swiper-pagination"></div>
     </div>
   `;
 
-  const cardList = mainCard.querySelector('.card__list');
   cardList.insertAdjacentHTML('beforebegin', swiperContainerHTML);
+  cardList.style.display = 'none';
+  if (showMoreBtn) showMoreBtn.style.display = 'none';
 
-  const swiperEl = document.querySelector('.brands-mobile .swiper');
+  const swiperEl = mainCard.querySelector(`.${swiperClassName} .swiper`);
   if (swiperEl) {
     new Swiper(swiperEl, {
       slidesPerView: 'auto',
       spaceBetween: 16,
       pagination: {
-        el: '.swiper-pagination',
+        el: `.${swiperClassName} .swiper-pagination`,
         clickable: true,
         bulletClass: 'custom-bullet',
         bulletActiveClass: 'custom-bullet-active',
       },
     });
   }
+}
 
-  // Скрываем десктопный список и кнопку
-  cardList.style.display = 'none';
-  if (showMoreBtn) {
-    showMoreBtn.style.display = 'none';
-  }
+// Применяем только на мобилках
+if (window.innerWidth <= 750) {
+  createMobileSwiper('.swiper--brand .main__card', 'brands-mobile');
+  createMobileSwiper('.swiper--repear .main__card', 'repear-mobile');
 }
