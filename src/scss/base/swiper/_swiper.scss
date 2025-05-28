@@ -60,6 +60,7 @@
   }
 }
 
+/* Свайпер брендов */
 .swiper--brand {
   .card__item {
     width: 240px;
@@ -67,6 +68,7 @@
   }
 }
 
+/* Свайпер ремонтов */
 .swiper--repear {
   .card__item {
     width: 240px;
@@ -75,7 +77,7 @@
 
   .card__repear {
     padding: 18px;
-    font-weight: 500; 
+    font-weight: 500;
     align-self: flex-start;
     justify-self: flex-start;
   }
@@ -87,16 +89,16 @@
   }
 }
 
+/* Свайпер услуг - десктоп */
 .swiper--service {
   .main__card {
     background-color: #f8f8f8;
-    padding: 24px 24px 40px; 
+    padding: 24px 24px 40px;
   }
 
   .card__table {
     display: flex;
     flex-direction: column;
-    
   }
 
   .card__table-head {
@@ -105,46 +107,45 @@
     font-size: 14px;
     color: #7e7e82;
     text-transform: uppercase;
-    padding: 16px;
-    
+    padding: 16px 24px;
   }
 
-  .card__table-row {
-    display: grid;
-    grid-template-columns: 0.95fr 120px 120px 120px;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 16px;
-    border-bottom: 1px solid #eaeaea;
+  .card__table-body {
+    .card__table-row {
+      display: grid;
+      grid-template-columns: 0.95fr 120px 120px 120px;
+      align-items: center;
+      background-color: #ffffff;
+      padding: 16px 24px;
+      border-bottom: 1px solid #eaeaea;
 
-    
-    border-radius: 0;
-  
-  &:first-child{
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+      &:first-child {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        border-bottom: none;
+      }
+    }
   }
-  &:last-child{
-    border: none;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-  }
-  }
+
   .card__td {
     font-size: 14px;
     color: #1a1a1a;
-    text-align: left; 
+    text-align: left;
   }
 
   .card__button {
-    justify-self: start; 
+    justify-self: start;
   }
 
   .service__note {
     width: 70vh;
     font-size: 13px;
     color: #7e7e82;
-    padding: 0 24px;
     margin-top: 24px;
 
     .service__note--link {
@@ -155,8 +156,9 @@
       font-size: medium;
       align-items: center;
       justify-content: start;
+
       &::after {
-         content: "";
+        content: "";
         display: flex;
         width: 24px;
         height: 24px;
@@ -167,15 +169,7 @@
   }
 }
 
-
-/* Блок мобильного свайпера */
-
-.brands-mobile {
-  margin-top: 0;
-  padding-top: 0;
-  order: -1;
-}
-
+/* Общие стили мобильных свайперов */
 .card__swiper {
   .swiper {
     padding: 0 16px;
@@ -186,6 +180,27 @@
     align-items: center;
   }
 
+  .swiper-pagination {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .custom-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #DDDDDD;
+    border-radius: 50%;
+
+    &.custom-bullet-active {
+      background-color: #B5B6BC;
+    }
+  }
+}
+
+/* Мобильный бренды */
+.brands-mobile {
   .swiper-slide {
     width: 240px !important;
     height: 72px;
@@ -195,30 +210,72 @@
     border-radius: 6px;
     border: 1px solid #EAEAEA;
     background-color: #ffffff;
-  }
 
-  .card__brand {
-    padding-left: 16px;
-    width: auto;
-    height: auto;
+    .card__brand {
+      padding-left: 16px;
+    }
   }
 }
 
-.swiper-pagination {
-  margin-top: 16px;
-  display: flex;
-  justify-content: center;
-  gap: 6px;
+/* Мобильный ремонт */
+.repear-mobile {
+  .swiper-slide {
+    width: 240px !important;
+    height: 160px !important;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    background-color: #ffffff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .card__repear {
+      font-weight: 500;
+      font-size: 14px;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+    }
+
+    .button--go {
+      align-self: flex-end;
+    }
+  }
 }
 
-.custom-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #DDDDDD;
-  border-radius: 50%;
-  opacity: 1;
+/* Мобильный услуги */
+.services-mobile {
+  .swiper-slide {
+    width: 260px !important;
+    height: 200px !important;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    background-color: red;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-  &-active {
-    background-color: #B5B6BC;
+    .card__td {
+      font-size: 14px;
+      color: #1B1C21;
+      margin-bottom: 6px;
+      text-align: left;
+    }
+
+    .card__td--heading {
+      font-weight: 500;
+      color: #7E7E82;
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    .card__button {
+      margin-top: auto;
+      align-self: flex-start;
+    }
+  }
+  .swiper-pagination {
+    align-self: flex-start;
   }
 }

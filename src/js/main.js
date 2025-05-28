@@ -147,8 +147,76 @@ function createMobileSwiper(mainCardSelector, swiperClassName) {
   }
 }
 
-// Применяем только на мобилках
+function createServiceSwiper(sectionSelector, swiperClassName) {
+  const section = document.querySelector(sectionSelector);
+  if (!section) return;
+
+  const tableBody = section.querySelector('.card__table-body');
+  if (!tableBody) return;
+
+  const rows = Array.from(tableBody.querySelectorAll('.card__table-row'));
+
+  const slidesHTML = rows.map(row => {
+    const cells = row.querySelectorAll('.card__td');
+    const button = row.querySelector('.card__button');
+    return `
+      <div class="swiper-slide card__slide">
+        <div class="card__mobile-field">
+          <div class="card__mobile-label">Ремонтные услуги</div>
+          <div class="card__mobile-value">${cells[0]?.innerHTML || ''}</div>
+        </div>
+        <div class="card__mobile-field">
+          <div class="card__mobile-label">Цена</div>
+          <div class="card__mobile-value">${cells[1]?.innerHTML || ''}</div>
+        </div>
+        <div class="card__mobile-field">
+          <div class="card__mobile-label">Срок</div>
+          <div class="card__mobile-value">${cells[2]?.innerHTML || ''}</div>
+        </div>
+        ${button?.outerHTML || ''}
+      </div>
+    `;
+  }).join('');
+
+  // Удаляем таблицу
+  const cardTable = section.querySelector('.card__table');
+  if (cardTable) cardTable.remove();
+
+  // Вставляем новый swiper
+  const swiperContainerHTML = `
+    <div class="${swiperClassName} card__swiper">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          ${slidesHTML}
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  `;
+  const mainCard = section.querySelector('.main__card');
+  if (mainCard) {
+    mainCard.insertAdjacentHTML('beforeend', swiperContainerHTML);
+  }
+
+  const swiperEl = section.querySelector(`.${swiperClassName} .swiper`);
+  if (swiperEl) {
+    new Swiper(swiperEl, {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      pagination: {
+        el: `.${swiperClassName} .swiper-pagination`,
+        clickable: true,
+        bulletClass: 'custom-bullet',
+        bulletActiveClass: 'custom-bullet-active',
+      },
+    });
+  }
+}
+
+// === Применяем только на мобилках ===
 if (window.innerWidth <= 750) {
   createMobileSwiper('.swiper--brand .main__card', 'brands-mobile');
   createMobileSwiper('.swiper--repear .main__card', 'repear-mobile');
+  createServiceSwiper('.swiper--service', 'service-mobile');
 }
+

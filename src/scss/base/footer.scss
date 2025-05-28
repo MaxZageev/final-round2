@@ -23,6 +23,7 @@
 
     &:first-child{
         justify-self: start;
+        text-align: start;
     }
     &:last-child{
         justify-self: end;
