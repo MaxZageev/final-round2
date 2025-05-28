@@ -1,7 +1,7 @@
 {
   "name": "webpack-config",
   "version": "1.0.0",
-  "homepage": "https://maxonchik.github.io/environment-settings-and-final-mockup",
+  "homepage": "https://maxzageev.github.io/final-round2/",
   "description": "simple webpack",
   "main": "index.js",
   "scripts": {
