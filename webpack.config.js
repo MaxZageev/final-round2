@@ -76,7 +76,7 @@ const plugins = () => {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, 'src/assets'), to: path.resolve(__dirname, 'app/assets'),
+                    from: path.resolve(__dirname, 'src/assets'), to: path.resolve(__dirname, 'dist/assets'),
                 }
             ]
         }),
@@ -90,8 +90,8 @@ module.exports = {
     context: path.resolve(__dirname, 'src'),
     entry: './js/main.js',
     output: {
-        filename: `./js/${filename('js')}`,
-        path: path.resolve(__dirname, 'app'),
+        path: path.resolve(__dirname, 'dist'), // ← вот это!
+        filename: 'js/[name].[contenthash].js',
         clean: true,
         publicPath: '',
     },
