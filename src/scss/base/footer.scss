@@ -1,0 +1,33 @@
+.window__footer {
+    display: flex;
+    align-items: space-around;
+    justify-content: space-around; 
+    flex-direction: column;
+    border-top: solid 1px #D9FFF5;
+    padding: 24px;
+    font-size: 14px;
+    color: #7e7e82;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+
+.footer__table {
+     display: grid;
+    grid-template-columns: 0.33fr 0.33fr 0.33fr;
+    
+    
+}
+.footer__th {
+        justify-self: center;
+
+    &:first-child{
+        justify-self: start;
+    }
+    &:last-child{
+        justify-self: end;
+        text-align: end;
+    }
+
+}
+}

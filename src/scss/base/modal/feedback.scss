@@ -10,7 +10,7 @@
 }
 
 /* ---------------------- */
-/* 📱 Модальное окно (base) */
+/* Модальное окно (base) */
 /* ---------------------- */
 @media screen and (min-width: 320px) {
   .modal {
@@ -112,39 +112,12 @@
       }
     }
 
-    /* 🔘 Кнопки */
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-self: end;
-      padding: 0.75rem 1.25rem;
-      border-radius: var(--radius);
-      font-size: 0.875rem;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-
-      &--accent {
-        background-color: var(--accent-color);
-        color: #fff;
-
-        &:hover {
-          box-shadow: 0 8px 16px rgba(255, 62, 121, 0.4); 
-          transform: translateY(-2px);
-        }
-      }
-
-      &__icon {
-        margin-left: 0.5rem;
-      }
-    }
+    
   }
 }
 
 /* --------------------------- */
-/* 🖥 Модалка для широких экранов */
+/*  Модалка для широких экранов */
 /* --------------------------- */
 @media screen and (min-width: 380px) {
   .modal {

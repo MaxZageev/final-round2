@@ -1,3 +1,15 @@
+:root {
+  --modal-z-index: 1000;
+  --modal-bg: rgba(0, 0, 0, 0.5);
+  --input-bg: #fff;
+  --input-border: #ddd;
+  --accent-color: #ff3e79;
+  --text-color: #333;
+  --radius: 16px;
+  --gap: 1rem;
+}
+
+
 // =====================================
 // Универсальные кнопки и иконки
 // =====================================
@@ -11,7 +23,31 @@
   border: none;
   cursor: pointer;
 }
+    .button--accent {
+      display: inline-flex;
+      align-items: center;
+      justify-self: end;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius);
+      font-size: 0.875rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      background-color: var(--accent-color);
+      color: #fff;
 
+      &__icon {
+        margin-left: 0.5rem;
+      }
+    }
+
+    .swiper {
+      .button--accent{
+        padding: 0.37rem 0.67;
+      }
+    }
 // Кнопка поиска
 .button-search {
   background-image: url("../img/icon/search.svg");
