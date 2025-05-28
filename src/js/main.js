@@ -169,11 +169,14 @@ function createServiceSwiper(sectionSelector, swiperClassName) {
           <div class="card__mobile-label">Цена</div>
           <div class="card__mobile-value">${cells[1]?.innerHTML || ''}</div>
         </div>
+        <div class="card__mobile-row">
         <div class="card__mobile-field">
           <div class="card__mobile-label">Срок</div>
           <div class="card__mobile-value">${cells[2]?.innerHTML || ''}</div>
         </div>
         ${button?.outerHTML || ''}
+       </div>
+
       </div>
     `;
   }).join('');
@@ -217,6 +220,6 @@ function createServiceSwiper(sectionSelector, swiperClassName) {
 if (window.innerWidth <= 750) {
   createMobileSwiper('.swiper--brand .main__card', 'brands-mobile');
   createMobileSwiper('.swiper--repear .main__card', 'repear-mobile');
-  createServiceSwiper('.swiper--service', 'service-mobile');
+  createServiceSwiper('.swiper--service', 'services-mobile');
 }
 

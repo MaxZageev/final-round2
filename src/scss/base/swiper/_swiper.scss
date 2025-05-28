@@ -143,11 +143,15 @@
   }
 
   .service__note {
-    width: 70vh;
+    width: calc(60%);
     font-size: 13px;
     color: #7e7e82;
-    margin-top: 24px;
-
+    padding: 24px;
+    @media screen and (max-width: 768px) {
+      width: calc(100%);
+      text-align: center;
+    }
+    
     .service__note--link {
       display: flex;
       color: #1a1a1a;
@@ -156,6 +160,7 @@
       font-size: medium;
       align-items: center;
       justify-content: start;
+      text-align: left;
 
       &::after {
         content: "";
@@ -250,32 +255,46 @@
     height: 200px !important;
     border: 1px solid #EAEAEA;
     border-radius: 6px;
-    background-color: red;
+    background-color: #ffffff;
     padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    .card__td {
+    .card__mobile-value {
       font-size: 14px;
       color: #1B1C21;
       margin-bottom: 6px;
       text-align: left;
     }
 
-    .card__td--heading {
+    .card__mobile-label {
       font-weight: 500;
       color: #7E7E82;
       font-size: 12px;
       margin-bottom: 4px;
     }
+  .card__mobile-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+    }
 
     .card__button {
+      white-space: nowrap;
+      flex-shrink: 0;
+      float: right;
       margin-top: auto;
-      align-self: flex-start;
+      align-self: flex-end;
+      padding: 0.37rem 0.67rem;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
     }
   }
   .swiper-pagination {
     align-self: flex-start;
   }
 }
+
